@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-test</title>
+    <!-- La etiqueta script me permite insertar código javascript, puede ser usada dentro del head o del body -->
+    <script>
+        function funcionEnHead() {
+            //escribo en consola, para ver los mensajes habilitar modo debug en browser
+            console.info("Llamo función definida en el head")
+        }
+    </script>
+    <!--también puedo insertar scripts que estan en archivos externos-->
+    <script src="js/base.js"></script>
+    <!--también puedo insertar scripts que estan en URL externas-->
+    <script src="https://www.w3schools.com/js/myScript.js"></script>
+</head>
+<body>
+    <h1>Javascript - test</h1>
+    <h2>Resumen</h2>
+    <p>Es un lenguaje de programación que me permite definir el comportamiento de una página web (HTML define el contenido y CSS la apariencia).  También es usado en programas de escritorio y servidores como node.js. También algunas BDD como MongoDB usan este lenguaje.
+        Con javascript puedo cambiar el contenido y atributos HTML así como ocultar o mostrar elementos HTML, también me permite modificar los estilos CSS, por medio de DOM.
+        Por medio de BOM puedo interactuar con el browser.</p>
+    <p>Para mayor referencia:
+        <a href="https://www.w3schools.com/js/default.asp" target="_blank"> w3schools - javascript</a> - 
+        <a href="https://www.w3schools.com/html/default.asp" target="_blank"> w3schools - html</a></p>
+    <h2>Temas base importantes</h2>
+    <h3>Donde hacer la llamada</h3>
+    <button type="button" onclick="funcionEnHead()">Llamar funcion head</button>
+    <button type="button" onclick="funcionEnBody()">Llamar funcion body</button>
+    <button type="button" onclick="mostrarSuma()">Llamar funcion en archivo externo</button>
+    <button type="button" onclick="myFunction()">Llamar funcion en URL externa</button>
+    <p id="demo"></p>
+    <h3>Objetos</h3>
+    <button type="button" onclick="llamarObjeto()">Llamar funcion objeto</button>
+    <p id="objeto"></p>
+    <h3>Try / catch</h3>
+    <p>El control de error es similar en sintaxis a java, usa try/catch/finally. La diferencia que solo arroja un tipo de exception</p>
+    <p>Cuando existe un error, se lanza una exception con un objeto <strong>Error</strong>, este objeto tiene la propiedad <strong>name</strong>, con el valor de esta propiedad podemos identificar
+    el tipo de error; mayor referencia en <a href="https://www.w3schools.com/jsref/jsref_obj_error.asp" target="_blank">Error</a></p>
+    <p>Para lanzar una exception predefinida usamos <strong>throw</strong>. Esta puede ser String, a Number, a Boolean ó Object.</p>
+    Ingrese un número:
+    <input id="inputError" type="text" >
+    <button type="button" onclick="llamarControlError()">Llamar funcion objeto</button>
+    <p id="error"></p>
+    <script>
+        function funcionEnBody() {
+            document.getElementById("demo").innerHTML = "llamo función definida en body e Inserto texto";
+        }
+    </script>
+</body>
+</html>
